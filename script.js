@@ -1112,28 +1112,6 @@ jQuery(function () {
 
 
 
-jQuery(function($) {
-    'use strict';
-    if ($.fn.slider) {
-        $(".art-slidecontainerheader").each(function () {
-            var slideContainer = $(this), tmp;
-            var inner = $(".art-slider-inner", slideContainer);
-            var helper = null;
-
-
-            inner.children().eq(0).addClass("active");
-            slideContainer.slider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigatorheader"),
-                helper: helper
-                            });
-        });
-    }
-});
 jQuery(function ($) {
     "use strict";
     if (!$.browser.msie || parseInt($.browser.version, 10) > 8)
@@ -1156,6 +1134,6 @@ jQuery(function ($) {
         }
         header.find(".art-shapes").prepend("<div style=\"position:absolute;top:0;left:0;width:100%;height:100%;background:" + bgimage + " " + bgpositions[i] + " no-repeat\">");
     }
-    header.css('background-image', "none".replace(/(url\(['"]?)/i, "$1" + path));
+    header.css('background-image', "url('images/header.png')".replace(/(url\(['"]?)/i, "$1" + path));
     header.css('background-position', "0 0");
 });
